@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA 6 Trophy Guide &amp; Tracker</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ff2e88'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3ELL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <h1>LEONIDA LEDGER</h1>
+  <p class="sub">The complete offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5 — 1 platinum, 2 gold, 6 silver, 46 bronze. Every guide is written in our own words and cites its sources. No online trophies: all 55 are single-player, offline.</p>
+</header>
+
+<div class="progress-wrap" aria-live="polite">
+  <span id="progress-text">0 of 55 earned</span>
+  <div id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0"><div id="progress-fill"></div></div>
+  <div id="grade-counts"></div>
+</div>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" id="tab-checklist" aria-selected="true">Checklist</button>
+  <button type="button" id="tab-roadmap" aria-selected="false">Platinum roadmap</button>
+  <button type="button" id="tab-about" aria-selected="false">About &amp; online trophies</button>
+</nav>
+
+<div class="controls" id="controls">
+  <input type="search" id="search" placeholder="Search trophies by name or description…" aria-label="Search trophies">
+  <label>Kind
+    <select id="kind">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="stranger">Stranger missions</option>
+      <option value="activity">Activities</option>
+      <option value="collectible">Collectibles</option>
+      <option value="robbery">Robberies</option>
+      <option value="world">Open world</option>
+      <option value="completion">Completion</option>
+      <option value="platinum">Platinum</option>
+    </select>
+  </label>
+  <label>Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="chk"><input type="checkbox" id="hide-earned"> Hide earned</label>
+  <label class="chk"><input type="checkbox" id="missable-only"> Missable only</label>
+  <label class="chk"><input type="checkbox" id="spoiler" checked> Hide story spoilers</label>
+  <button type="button" id="export">Export progress</button>
+  <label class="chk">Import progress <input type="file" id="import" accept="application/json,.json"></label>
+</div>
+
+<div id="missable-banner" role="alert">
+  <strong>⚠ 1 possibly missable trophy:</strong> <button type="button" id="missable-jump">Positive Mental Attitude</button> — do Lucia's balcony meditation in Chapter 1, the morning after the mission “Down to Earth”, before Chapter 1 ends. It is still unconfirmed whether that meditation is required for the trophy, so do it to be safe. Every other trophy can be earned after the story.
+</div>
+
+<main>
+  <section id="list" aria-label="Trophy checklist"></section>
+
+  <aside id="guide-pane" aria-label="Trophy guide">
+    <h2 id="guide-title">Pick a trophy</h2>
+    <p class="gdesc" id="guide-desc">Click any trophy in the checklist to read its guide and sources here.</p>
+    <div id="guide-body"></div>
+  </aside>
+
+  <section id="roadmap" hidden aria-label="Platinum roadmap"></section>
+
+  <section id="about" hidden aria-label="About this guide">
+    <h2>About this guide</h2>
+    <p>Leonida Ledger is an offline, static guide: it loads no network resources and works with the network off. Trophy names, descriptions and grades are shown exactly as PlayStation publishes them (one name is censored with asterisks by PlayStation itself: “T**s Ass Drug Money”). Every guide text is written in our own words for this entry and names its sources beside it — a fact with no source earns no trust here. Where a method is still unconfirmed (Bad Luck, I Guess; The Truth Is Out There; Challenging Tank), the guide says so instead of inventing one.</p>
+    <div class="online-box">
+      <h3>Online trophies: none</h3>
+      <p><strong>0 online trophies.</strong> All 55 trophies are earned in single-player, offline play. There is no multiplayer trophy, no co-op trophy and no trophy that needs PlayStation Plus. If a filter for “online” shows an empty list, that is the correct answer — this box is the empty state, not a bug. Cheats disable trophies while active, so keep them off for a trophy run.</p>
+    </div>
+    <p>Sources for the trophy list and the guides: PowerPyx, Push Square, PlanetGTA6 (cross-checked against Exophase and PSNProfiles), KeenGamer, GTABase and EGamers. Lists were checked against at least two of these before the guide was written.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Ledger — an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive; this guide uses no Rockstar logo, artwork or game screenshots. Progress is saved in your browser (localStorage) and never leaves your device.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
